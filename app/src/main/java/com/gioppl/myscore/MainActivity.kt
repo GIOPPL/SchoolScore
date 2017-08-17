@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.gioppl.scorelibrary.ui.activity.MyScoreActivity
+import com.gioppl.scorelibrary.view.activity.MyScoreActivity
 
 class MainActivity : AppCompatActivity() {
 

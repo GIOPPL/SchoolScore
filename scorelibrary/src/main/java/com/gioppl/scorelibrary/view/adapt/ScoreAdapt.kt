@@ -1,4 +1,4 @@
-package com.gioppl.scorelibrary.ui.adapt
+package com.gioppl.scorelibrary.view.adapt
 
 /**
  * Created by GIOPPL on 2017/8/16.

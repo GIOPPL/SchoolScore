@@ -1,4 +1,4 @@
-package com.gioppl.scorelibrary.entity
+package com.gioppl.scorelibrary.model.entity
 
 /**
  * Created by GIOPPL on 2017/8/16.

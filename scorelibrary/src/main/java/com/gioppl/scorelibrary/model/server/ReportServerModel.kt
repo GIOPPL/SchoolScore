@@ -1,10 +1,13 @@
-package com.gioppl.scorelibrary.server
+package com.gioppl.scorelibrary.model.server
+
+import org.reactivestreams.Subscriber
+
 
 /**
  * Created by GIOPPL on 2017/8/16.
  */
-interface ReportServer {
-    fun onSuccess()//成功获取成绩单
+interface ReportServerModel {
+    fun onCheck(account:String,pwd:String,subscriber: Subscriber<String>) //成功获取成绩单
     fun onError()//获取成绩单失败
 }
 
