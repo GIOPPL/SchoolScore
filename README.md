@@ -1,6 +1,6 @@
 天职师大URP系统成绩查询库
 ======================================================
-**[中文文档点击这里](https://github.com/GIOPPL/SchoolScore/blob/master/README.md)**
+**[The English document click here](https://github.com/GIOPPL/SchoolScore/blob/master/EnglishMD.md)**
 
 项目功能
 -------------------
