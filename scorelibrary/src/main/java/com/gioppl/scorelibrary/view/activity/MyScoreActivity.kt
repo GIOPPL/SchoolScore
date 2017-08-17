@@ -20,8 +20,8 @@ class MyScoreActivity : AppCompatActivity(),ScoreView{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.score)
         tv_score= findViewById(R.id.tv_score) as TextView?
-        mPresent= ScorePresent(this);
-        mPresent!!.getScore("02210150204","ESUPMT")
+        mPresent= ScorePresent(scoreView = this);
+        mPresent!!.getScore("账户","密码")
     }
 
     override fun onSuccess(xml: String) {
