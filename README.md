@@ -1,4 +1,4 @@
-天职师大URP系统成绩查询库
+天职师大URP系统成绩查询库(PPL)
 ======================================================
 **[The English document click here](https://github.com/GIOPPL/SchoolScore/blob/master/EnglishMD.md)**
 
