@@ -14,7 +14,12 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-    public fun myScore(view: View){
-        startActivity(Intent(this, MyScoreActivity::class.java))
+
+    public fun myScore(view: View) {
+        var intent=Intent(this, MyScoreActivity::class.java)
+//        intent.putExtra("account","02210150204")
+//        intent.putExtra("pwd","ESUPMT")
+//        startActivity(intent)
+        startActivity(MyScoreActivity.toScoreActivity(this,"账户","密码"))
     }
 }
