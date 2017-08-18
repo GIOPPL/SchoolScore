@@ -1,6 +1,7 @@
 package com.gioppl.scorelibrary.present
 
 import android.util.Log
+import com.gioppl.scorelibrary.model.entity.ScoreEntity
 import com.gioppl.scorelibrary.model.server.DownScoreMolder
 import com.gioppl.scorelibrary.view.ScoreView
 import org.reactivestreams.Subscriber
@@ -27,9 +28,8 @@ class ScorePresent{
         mModel!!.onCheck(account,pwd,subscriber)
     }
 
-
     //创建订阅者
-    var subscriber: Subscriber<String> = object : Subscriber<String> {
+    var subscriber: Subscriber<ArrayList<ScoreEntity>> = object : Subscriber<ArrayList<ScoreEntity>> {
         override fun onSubscribe(s: Subscription) {
             //这一步是必须，我们通常可以在这里做一些初始化操作，调用request()方法表示初始化工作已经完成
             //调用request()方法，会立即触发onNext()方法
@@ -37,9 +37,8 @@ class ScorePresent{
             s.request(java.lang.Long.MAX_VALUE)
         }
 
-        override fun onNext(xml: String) {
-            scoreView!!.onSuccess(xml)
-            Log.e("onNext", xml)
+        override fun onNext(mList: ArrayList<ScoreEntity>) {
+            scoreView!!.onSuccess(mList)
         }
 
         override fun onError(t: Throwable) {
@@ -51,11 +50,6 @@ class ScorePresent{
             Log.e("onComplete", "complete")
         }
     }
-
-
-
-
-
     fun log(text: String = "没有东西") = Log.i("**", text)
 
 }

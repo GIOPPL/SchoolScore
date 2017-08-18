@@ -1,5 +1,6 @@
 package com.gioppl.scorelibrary.model.server
 
+import com.gioppl.scorelibrary.model.entity.ScoreEntity
 import org.reactivestreams.Subscriber
 
 
@@ -7,7 +8,7 @@ import org.reactivestreams.Subscriber
  * Created by GIOPPL on 2017/8/16.
  */
 interface ReportServerModel {
-    fun onCheck(account:String,pwd:String,subscriber: Subscriber<String>) //成功获取成绩单
+    fun onCheck(account:String,pwd:String,subscriber: Subscriber<ArrayList<ScoreEntity>>) //成功获取成绩单
     fun onError()//获取成绩单失败
 }
 
