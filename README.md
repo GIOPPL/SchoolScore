@@ -91,7 +91,7 @@ account是你的学号，password是你的密码
     <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-![baidu](https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png "百度")
+![error](https://github.com/GIOPPL/SchoolScore/blob/master/error_image.png)
 
 联系我
 -------
