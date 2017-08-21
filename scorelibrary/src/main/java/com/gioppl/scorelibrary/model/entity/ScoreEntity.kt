@@ -12,6 +12,9 @@ class ScoreEntity {
     var nature:String?=null//课程属性
     var score: String? = null//成绩
     var reasonOfNoPass:String?=null//未通过原因
+    constructor(errorReason:String){
+        this.errorReason=errorReason
+    }
     constructor(id: String?, number: String?, courseName: String?, EnglishName: String?, credit: String?, nature: String?, score: String?, reasonOfNoPass: String?) {
         this.id = id
         this.number = number
@@ -22,6 +25,6 @@ class ScoreEntity {
         this.score = score
         this.reasonOfNoPass = reasonOfNoPass
     }
-
+    var errorReason:String?=null
 
 }

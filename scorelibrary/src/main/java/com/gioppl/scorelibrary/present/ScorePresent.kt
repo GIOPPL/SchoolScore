@@ -38,11 +38,17 @@ class ScorePresent{
         }
 
         override fun onNext(mList: ArrayList<ScoreEntity>) {
-            scoreView!!.onSuccess(mList)
+            if (mList==null||mList.size==0) return;
+            if (mList.size==1){
+                onError(Throwable(mList[0]!!.errorReason))
+            }else{
+                scoreView!!.onSuccess(mList)
+            }
         }
 
         override fun onError(t: Throwable) {
             Log.e("onError", t.message)
+            scoreView!!.onError(t.toString())
         }
 
         override fun onComplete() {

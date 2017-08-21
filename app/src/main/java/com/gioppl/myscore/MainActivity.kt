@@ -25,16 +25,16 @@ class MainActivity : AppCompatActivity(), ScoreView {// step 1,实现ScoreView�
         var score: String? = null//成绩
         var reasonOfNoPass:String?=null//未通过原因
      */
-    override fun onSuccess(xml: ArrayList<ScoreEntity>) {
+    override fun onSuccess(list: ArrayList<ScoreEntity>) {
         var text=""
-        for (x in xml){
+        for (x in list){
             text+=x.courseName
         }
         tv_main!!.text=text
     }
 
-    override fun onError(result: String) {
-
+    override fun onError(reason: String) {
+        tv_main!!.text=reason
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,10 +46,10 @@ class MainActivity : AppCompatActivity(), ScoreView {// step 1,实现ScoreView�
 
     public fun myScore(view: View) {
         var intent= Intent(this, MyScoreActivity::class.java)
-        startActivity(MyScoreActivity.toScoreActivity(this,"学号","密码"))
+        startActivity(MyScoreActivity.toScoreActivity(this,"账户","密码"))
         finish()
     }
     public fun getScore(view: View){
-        mPresent!!.getScore("学号","密码")// step 2,填写学号密码
+        mPresent!!.getScore("账户","密码")// step 2,填写学号密码
     }
 }

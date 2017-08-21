@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.widget.Toast
 import com.gioppl.scorelibrary.R
 import com.gioppl.scorelibrary.model.entity.ScoreEntity
 import com.gioppl.scorelibrary.present.ScorePresent
@@ -40,7 +41,7 @@ class MyScoreActivity : AppCompatActivity(),ScoreView{
         rv_score= findViewById(R.id.rv_score) as RecyclerView?
         mAdapt= ScoreAdapt(mList)
         var manager=LinearLayoutManager(this)
-        rv_score!!.layoutManager=manager
+        rv_score!!.layoutManager=manager!!
         rv_score!!.adapter=mAdapt
         rv_score!!.setHasFixedSize(true)
     }
@@ -58,8 +59,8 @@ class MyScoreActivity : AppCompatActivity(),ScoreView{
         mAdapt!!.notifyItemInserted(0)
     }
 
-    override fun onError(result: String) {
-
+    override fun onError(reason: String) {
+        Toast.makeText(this,""+reason, Toast.LENGTH_SHORT).show()
     }
 
     companion object {
