@@ -41,7 +41,7 @@ allprojects {
 **Step 2.** 在你的APP的build.gradle中的dependency中添加
 ```groovy
 dependencies {
-	    compile 'com.github.GIOPPL:SchoolScore:071ea9d7da'
+	    compile 'com.github.GIOPPL:SchoolScore:-SNAPSHOT'
 }
 ```
 
@@ -56,7 +56,7 @@ account是你的学号，password是你的密码
 获取成绩信息的用法
 ----------------------------------
 **原本是xml数据，已经解析成ArrayLsiy<ScoreEnity>** 
-####step 1,实现接口ScoreView
+#### step 1,实现接口ScoreView
 
 >kotlin 应用中方法
 ```kotlin 
@@ -70,7 +70,7 @@ account是你的学号，password是你的密码
     @override
     void OnError(result:String)
 ```
-####step 2,
+#### step 2,
 >kotlin 应用中方法
 ```kotlin
     var mPresent=ScorePresent(this);
@@ -81,7 +81,7 @@ account是你的学号，password是你的密码
     ScorePresent mPresent=ScorePresent(this);
     mPresent.getScore("学号","密码")
 ```
-####step 3
+#### step 3
 > 然后就等着数据从OnSuccess()中传进来把
 
 注意
@@ -91,7 +91,7 @@ account是你的学号，password是你的密码
     <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-![baidu](https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png "百度")
+![error](https://github.com/GIOPPL/SchoolScore/blob/master/error_image.png)
 
 联系我
 -------
