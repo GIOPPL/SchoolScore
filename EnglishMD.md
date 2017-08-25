@@ -43,7 +43,7 @@ allprojects {
 **Step 2.** Add the dependency in your APP build.gradle
 ```groovy
 dependencies {
-	    compile 'com.github.GIOPPL:SchoolScore:071ea9d7da'
+	    compile 'com.github.GIOPPL:SchoolScore:v1.1.0'
 }
 ```
 
