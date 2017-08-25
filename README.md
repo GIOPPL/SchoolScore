@@ -41,7 +41,7 @@ allprojects {
 **Step 2.** 在你的APP的build.gradle中的dependency中添加
 ```groovy
 dependencies {
-	    compile 'com.github.GIOPPL:SchoolScore:720758d9a4'
+	    compile 'com.github.GIOPPL:SchoolScore:v1.1.0'
 }
 ```
 
