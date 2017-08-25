@@ -55,7 +55,7 @@ account是你的学号，password是你的密码
 
 获取成绩信息的用法
 ----------------------------------
-**原本是xml数据，已经解析成ArrayLsiy<ScoreEnity>** 
+**原本是xml数据，已经解析成ArrayList<ScoreEnity>** 
 #### step 1,实现接口ScoreView
 
 >kotlin 应用中方法
